@@ -1,5 +1,5 @@
 require 'active_support/inflector'
-
+# TODO: add order, find by
 class SQLObject
   def self.columns
     return @columns if @columns
