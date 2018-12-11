@@ -9,14 +9,13 @@ After spending years manipulating data in excel, I wanted to dive deeper into th
 
 ### How to demo this tool:
 * Clone this repo
-* Run `bundle install`
 * Run `cat db/seeds.sql | sqlite3 pets.db`
 * Run `ruby lib/databasic.rb`
 Some example functionality will print to the terminal, try additional methods shown below using the sample pets database.
 
 
 ### How to use in your project:
-Clone this repo and run `bundle install`. You must then `require 'databasic.rb'` in your file to gain access to the Databasic API methods. 
+Clone this repo and then `require 'databasic.rb'` in your file to gain access to the Databasic API methods.
 
 Open a database connection by referencing your database file in a DBConnection() method.
 
