@@ -15,13 +15,8 @@ After spending years manipulating data in excel, I wanted to dive deeper into th
 Open database connection  
 Run rake db:create to auto-generate a seeded database
 
-Next, define a model:
+Next, define a model to use the API methods.
 
-``my_attr_accessor``
+The ``foreign_key`` for ``has_many :pets`` would have been defaulted to ``:person_id`` rather than ``:owner_id``. This isn't the naming we want, so our associations allow overrides for ``:class_name``, ``:foreign_key``, and `:primary_key`. This is true for our ``belongs_to`` and ``has_one_through`` associations as well.
 
-The ``foreign_key`` for ``has_many :cats`` would have been guessed to be ``:person_id``.
-This isn't the naming we want, so our ``has_many`` and ``belongs_to`` associations allow overrides for ``:class_name``, ``:foreign_key``, and `:primary_key`:
-
-In this example, the table name ``"persons"`` will be inferred. To override the default, call ``set_table_name "new_name"``:
-
-There is also support for ``has_one_through``:
+In this example, the table name ``"persons"`` will be inferred. To override the default, call ``self.table_name = "new_name"``.

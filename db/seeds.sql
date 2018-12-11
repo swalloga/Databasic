@@ -8,7 +8,7 @@ CREATE TABLE pets (
   name VARCHAR(255) NOT NULL,
   owner_id INTEGER,
 
-  FOREIGN KEY(owner_id) REFERENCES human(id)
+  FOREIGN KEY(owner_id) REFERENCES person(id)
 );
 
 CREATE TABLE people (
@@ -17,7 +17,7 @@ CREATE TABLE people (
   lname VARCHAR(255) NOT NULL,
   house_id INTEGER,
 
-  FOREIGN KEY(house_id) REFERENCES human(id)
+  FOREIGN KEY(house_id) REFERENCES house(id)
 );
 
 CREATE TABLE houses (

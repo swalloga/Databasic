@@ -13,7 +13,7 @@ DBConnection.open('db/seeds.sql')
 
 # define pet model
 class Pet < SQLObject
- my_attr_accessor :id, :name, :owner_id
+ attr_accessor :id, :name, :owner_id
 
  belongs_to :person, foreign_key: :owner_id
  has_one_through :house, :person, :house
@@ -21,18 +21,22 @@ end
 
 # define person model
 class Person < SQLObject
- set_table_name 'people'
- my_attr_accessor :id, :fname, :lname, :house_id
+ Person.table_name = 'people'
+ attr_accessor :id, :fname, :lname, :house_id
 
- has_many :pets, foreign_key: :owner_id
+ has_many :pets,
+ foreign_key: :owner_id,
+ class_name: :Pet,
+ primary_key: :id
+
  belongs_to :house
 end
 
 # define house model
 class House < SQLObject
- my_attr_accessor :id, :address
+ attr_accessor :id, :address
 
- # specify class_name, foreign_key, primary_key (defaults are identical in this case)
+ # specify class_name, foreign_key, primary_key
  has_many :people,
    class_name: :Person,
    foreign_key: :house_id,
