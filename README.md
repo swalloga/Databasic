@@ -2,8 +2,6 @@
 
 ### How to use:
 * Clone this repo
-* Run `bundle install`
-* Run `rails db:create`
 * Run `$ ruby databasic.rb`
 
 ### Summary:
@@ -14,7 +12,6 @@ After spending years manipulating data in excel, I wanted to dive deeper into th
 
 ### Usage:
 Open database connection  
-Run `rails db:create` to auto-generate a seeded database
 
 Next, define a model to use the API methods.
 
