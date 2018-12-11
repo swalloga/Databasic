@@ -9,7 +9,7 @@ After spending years manipulating data in excel, I wanted to dive deeper into th
 ### Demo this tool:
 * Clone this repo
 * Run `cat db/seeds.sql | sqlite3 pets.db`
-* Run `$ ruby lib/databasic.rb`
+* Run `ruby lib/databasic.rb`
 
 
 ### Use in your project:

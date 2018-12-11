@@ -1,4 +1,4 @@
-require 'db_connection'
+require_relative 'db_connection'
 require 'active_support/inflector'
 # TODO: add order, find by
 class SQLObject
@@ -6,7 +6,7 @@ class SQLObject
     return @columns if @columns
     query = DBConnection.execute2(<<-SQL)
     SELECT
-      *
+      #{self.table_name}.*
     FROM
       #{self.table_name}
     SQL
@@ -49,13 +49,12 @@ class SQLObject
   def self.find(id)
     results = DBConnection.execute(<<-SQL, id)
     SELECT
-      *
+      #{self.table_name}.*
     FROM
       #{self.table_name}
     WHERE
       #{self.table_name}.id = ?
     SQL
-
     parse_all(results).first
   end
 

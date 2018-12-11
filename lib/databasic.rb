@@ -1,15 +1,12 @@
+require_relative 'db_connection'
 require_relative 'sql_object'
 require_relative 'searchable'
-require_relative 'asscoiatable'
-require_relative 'asscoiatable2'
+require_relative 'associatable'
+require_relative 'associatable2'
 require 'sqlite3'
 
-
-show verbose queries
-ENV['DEBUG'] = 'true'
-
 # open database connection
-DBConnection.open('../pets.db')
+DBConnection.open('pets.db')
 
 # define pet model
 class Pet < SQLObject
@@ -26,7 +23,7 @@ class Person < SQLObject
 
  has_many :pets,
  foreign_key: :owner_id,
- class_name: :Pet,
+ class_name: 'Pet',
  primary_key: :id
 
  belongs_to :house
@@ -38,7 +35,7 @@ class House < SQLObject
 
  # specify class_name, foreign_key, primary_key
  has_many :people,
-   class_name: :Person,
+   class_name: 'Person',
    foreign_key: :house_id,
    primary_key: :id
 end
