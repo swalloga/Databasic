@@ -1,15 +1,15 @@
-require 'active_support/inflector'
-require 'sqlite3'
 require_relative 'sql_object'
 require_relative 'searchable'
 require_relative 'asscoiatable'
 require_relative 'asscoiatable2'
+require 'sqlite3'
+
 
 show verbose queries
 ENV['DEBUG'] = 'true'
 
 # open database connection
-DBConnection.open('db/seeds.sql')
+DBConnection.open('../pets.db')
 
 # define pet model
 class Pet < SQLObject

@@ -1,3 +1,4 @@
+require 'db_connection'
 require 'active_support/inflector'
 # TODO: add order, find by
 class SQLObject
