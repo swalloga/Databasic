@@ -1,16 +1,16 @@
 # Databasic
 
- ###How to use:
+###How to use:
 1. Clone this repo
 2. Run ``rake db:create``
 3. Run ``$ ruby databasic.rb``
 
- ###Summary:
+###Summary:
 
 Databasic is a lightweight Object Relational Mapping tool, which I built to deepen my understanding of ActiveRecord.
 After spending years manipulating data in excel, I wanted to dive deeper into the connections between the object oriented models of Ruby and their corresponding tables in a SQL database.
 
- ###Usage:
+###Usage:
 open database connection
 run rake db:create to auto-generate a seeded database
 
