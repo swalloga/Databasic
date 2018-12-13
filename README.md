@@ -9,6 +9,7 @@ After spending years manipulating data in excel, I wanted to dive deeper into th
 
 ### How to demo this tool:
 * Clone this repo
+* Run `bundle install`
 * Run `cat db/seeds.sql | sqlite3 pets.db`
 * Run `ruby lib/databasic.rb`
 Some example functionality will print to the terminal, try additional methods shown below using the sample pets database.
@@ -24,7 +25,7 @@ Next, define a model on which to use the databasic API methods.
 
 ### Databasic API:
 
-`self.column`  
+`self.columns`  
 `self.finalize!`  
 `self.table_name=(table_name)`  
 `self.table_name`  
