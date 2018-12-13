@@ -11,8 +11,15 @@ After spending years manipulating data in excel, I wanted to dive deeper into th
 * Clone this repo
 * Run `bundle install`
 * Run `cat db/seeds.sql | sqlite3 pets.db`
-* Run `ruby lib/databasic.rb`
-Some example functionality will print to the terminal, try additional methods shown below using the sample pets database.
+* Run `ruby lib/databasic.rb`  
+
+At this point, some example functionality will print to the terminal.
+
+
+* Open pry by running `pry`
+* Run `load 'lib/databasic.rb'`  
+
+Now you can try any of the additional methods shown below using the sample pets database.
 
 
 ### How to use in your project:
