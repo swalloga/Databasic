@@ -16,27 +16,24 @@ After spending years manipulating data in excel, I wanted to dive deeper into th
 At this point, some example functionality will print to the terminal.
 
 
-* Open pry by running `pry`
+* Run `pry`
 * Run `load 'lib/databasic.rb'`  
 
 Now you can try any of the additional methods shown below using the sample pets database.
 
 
-### How to use in your project:
-Clone this repo and then `require 'databasic.rb'` in your file to gain access to the Databasic API methods.
-
-Open a database connection by referencing your database file in a DBConnection() method.
-
-Next, define a model on which to use the databasic API methods.
-
-
 ### Databasic API:
+`self.all`  
+![all-example](https://github.com/swalloga/Databasic/blob/master/img/All-example.png)
+
 
 `self.columns`  
+![columns-example](https://github.com/swalloga/Databasic/blob/master/img/columns-example.png)
+
+###### Other Methods
 `self.finalize!`  
 `self.table_name=(table_name)`  
 `self.table_name`  
-`self.all`  
 `self.parse_all(results)`  
 `self.find(id)`  
 `initialize(params = {})`  
